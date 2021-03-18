@@ -13,27 +13,25 @@ body {
 }
 
 .background {
-  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100vw;
   height: 100vh;
-  max-height: 710px;
-  min-height: 600px;
   position: fixed;
   align-self: center;
   img {
-    width: $circle-size;
+    max-width: 622px;
     position: absolute;
-    min-width: 600px;
-    max-width: 750px;
-    
   }
   .top {
-    top: $circle-pos-tb;
-    left: $circle-pos-rl;
+    top: $c-tb;
+    left: $c-rl; 
   }
-  .bottom{
-    bottom: $circle-pos-tb;
-    right: $circle-pos-rl;
+  .bottom {
+    bottom: $c-tb;
+    right: $c-rl;
   }
 }
 
@@ -117,4 +115,20 @@ body {
   }
 }
 
+@media only screen and (min-width: 625px) {
+  .background {
+    max-width: calc(625px + 5vw);
 
+    img {
+      max-width: calc(545px + 10vw);
+    }
+    .top {
+      top: calc(-100px + -10vw);
+      left: calc(-300px + -10vw);
+    }
+    .bottom {
+      bottom: calc(-100px + -10vw);
+      right: calc(-300px + -10vw);
+    }
+}
+}

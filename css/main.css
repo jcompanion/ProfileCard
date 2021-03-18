@@ -365,32 +365,38 @@ body {
 }
 
 .background {
-  max-width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100vw;
   height: 100vh;
-  max-height: 710px;
-  min-height: 600px;
   position: fixed;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
 }
 
 .background img {
-  width: 50vw;
+  max-width: 622px;
   position: absolute;
-  min-width: 600px;
-  max-width: 750px;
 }
 
 .background .top {
-  top: -45%;
-  left: -50%;
+  top: -300px;
+  left: -400px;
 }
 
 .background .bottom {
-  bottom: -45%;
-  right: -50%;
+  bottom: -300px;
+  right: -400px;
 }
 
 .card {
@@ -490,5 +496,22 @@ body {
 
 .attribution a {
   color: #3e52a3;
+}
+
+@media only screen and (min-width: 625px) {
+  .background {
+    max-width: calc(625px + 5vw);
+  }
+  .background img {
+    max-width: calc(545px + 10vw);
+  }
+  .background .top {
+    top: calc(-100px + -10vw);
+    left: calc(-300px + -10vw);
+  }
+  .background .bottom {
+    bottom: calc(-100px + -10vw);
+    right: calc(-300px + -10vw);
+  }
 }
 /*# sourceMappingURL=main.css.map */
